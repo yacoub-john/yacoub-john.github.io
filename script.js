@@ -126,15 +126,15 @@ document.addEventListener("DOMContentLoaded", function() {
             <p><strong>Phoenix Geophysics</strong> · Internship · Aug. 2022 to Jan. 2023</p>
             <ul>
                 <li>Developed and maintained an intuitive graphical user interface geophysics application using C++ and Qt, overseeing functionalities including calibration, data acquisition, processing, analysis, and interpretation.</li>
-                <li>Enhanced software quality and reliability by introducing novel features and promptly addressing bugs, ensuring a seamless user experience.</li>
-                <li>Collaborated closely with geophysicists and cross-disciplinary colleagues, effectively capturing requirements and refining workflows to enhance software functionality.</li>
-                <li>Fostered collaboration across diverse teams, facilitating the integration of software solutions with hardware systems to optimize field data collection processes.</li>
-                <li>Displayed adept problem-solving and analytical skills in the proficient identification and resolution of software-related challenges.</li>
+                <li>Enhanced software quality and reliability by introducing novel features, performing rigorous testing, and resolving identified bugs.</li>
+                <li>Refined software performance through profiling, optimization, and adopting best coding practices, resulting in improved application responsiveness.</li>
+                <li>Contributed to collaborative development efforts, leveraging version control systems for seamless code integration and knowledge sharing among team members.</li>
+                <li>Strengthened technical documentation skills by compiling comprehensive guides and manuals, supporting user adoption and troubleshooting efforts.</li>
             </ul>
         </div>
         <div>
-            <h3>Undergraduate Research Assistant (Autonomous vehicles)</h3>
-            <p><strong>SDCN Lab - Lassonde School of Engineering</strong> · Aug. 2021 to Jan. 2022</p>
+            <h3>Control Systems Intern</h3>
+            <p><strong>Applanix</strong> · Internship · Aug. 2021 to Jan. 2022</p>
             <ul>
                 <li>Programmed and tested an algorithm using C++ to determine the attitude and position of an autonomous vehicle using a low-cost IMU.</li>
                 <li>Utilized IMU algorithms to estimate the attitude and position of the vehicle in real-time, augmenting system accuracy and reliability.</li>
@@ -184,4 +184,14 @@ document.addEventListener("DOMContentLoaded", function() {
         <p>&copy; 2024 John Yacoub</p>
     `;
     app.appendChild(footer);
+
+    // Smooth Scroll
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
